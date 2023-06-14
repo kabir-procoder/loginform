@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/OzV.gif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+}
+.wrapper {
+    position: relative;
+    max-width: 470px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 20px 30px 120px;
+    background: #2eebc220;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.form header {
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.wrapper form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+form input {
+    height: 60px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 8px;
+    background: #fff;
+}
+form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    accent-color: #fff;
+    cursor: pointer;
+}
+form .checkbox label {
+    cursor: pointer;
+    color: #fff;
+}
+form a:hover{
+    text-decoration: underline;
+}
+form input[type="submit"] {
+    margin-top: 15px;
+    padding: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* LOGIN FORM CSS */
+.form.login header {
+    color: #333;
+    opacity: 0.6;
+}
+.form.login {
+    background: #fff;
+    position: absolute;
+    width: calc(100% + 220px);
+    height: 100%;
+    left: 50%;
+    bottom: -86%;
+    transform: translateX(-50%);
+    padding: 20px 140px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+.form.login input {
+    border: 1px solid #aaa;
+}
+.form.login input:focus {
+    box-shadow: 0 1px 0 #ddd;
+}
+form a {
+    color: #333;
+    text-decoration: none;
+}
+.form.login input[type="submit"] {
+    background: #2eebc2;
+    color: #fff;
+    border: none;
+}
+/* javascript animation */
+.wrapper.active .form.login {
+    bottom: -15%;
+    border-radius: 20%;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+/* JAVASCRIPT BUTTON EFFECT LOGIN/SIGNUP */
+.mouse_traking_login {
+    margin-top: 15px;
+    position: relative;
+    padding: 18px 0;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    background: #b6ae44;
+    color: white;
+}
+.mouse_traking_login::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    transform: translate(-50%, -50%);
+    transition: width .2s ease, height .2s ease;
+    background: radial-gradient(circle closest-side, #ffffff, transparent);
+    opacity: 0.5;
+}
+.mouse_traking_login:hover::before {
+    --size: 200px;
+}
